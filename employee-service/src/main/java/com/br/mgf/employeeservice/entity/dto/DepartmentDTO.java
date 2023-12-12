@@ -11,11 +11,10 @@ import java.util.UUID;
 @NoArgsConstructor
 @Setter
 @Getter
-public class EmployeeDTO {
+public class DepartmentDTO {
 
     private UUID uuid;
-    private String firstName;
-    private String lastName;
-    private String email;
+    private String departmentName;
+    private String departmentDescription;
     private String departmentCode;
 }

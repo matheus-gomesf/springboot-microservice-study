@@ -1,6 +1,7 @@
 package com.br.mgf.employeeservice.service;
 
 
+import com.br.mgf.employeeservice.entity.dto.APIResponseDto;
 import com.br.mgf.employeeservice.entity.dto.EmployeeDTO;
 
 import java.util.List;
@@ -13,4 +14,6 @@ public interface EmployeeService {
     void deleteEmployee(UUID id);
 
     List<EmployeeDTO> listEmployees();
+
+    APIResponseDto getById(UUID id);
 }

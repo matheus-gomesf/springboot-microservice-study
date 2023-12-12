@@ -12,4 +12,6 @@ public interface DepartmentService {
     void deleteDepartment(UUID id);
 
     List<DepartmentDTO> listDepartments();
+
+    DepartmentDTO getDepartmentByCode(String code);
 }

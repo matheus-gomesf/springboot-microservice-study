@@ -44,4 +44,10 @@ public class DepartmentServiceImpl implements DepartmentService {
     public List<DepartmentDTO> listDepartments() {
         return departmentRepository.findAll().stream().map(DEPARTMENT_MAPPER::entityToDto).toList();
     }
+
+    @Override
+    public DepartmentDTO getDepartmentByCode(String code) {
+        val byDepartmentCode = departmentRepository.findByDepartmentCode(code);
+        return DEPARTMENT_MAPPER.entityToDto(byDepartmentCode.get());
+    }
 }

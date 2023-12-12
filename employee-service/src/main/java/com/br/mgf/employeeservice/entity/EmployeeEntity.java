@@ -27,4 +27,6 @@ public class EmployeeEntity {
     private String lastName;
     @Column(name = "EMAIL")
     private String email;
+    @Column(name = "DEPARTMENT_CODE")
+    private String departmentCode;
 }

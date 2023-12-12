@@ -1,5 +1,6 @@
 package com.br.mgf.employeeservice.controller;
 
+import com.br.mgf.employeeservice.entity.dto.APIResponseDto;
 import com.br.mgf.employeeservice.entity.dto.EmployeeDTO;
 import com.br.mgf.employeeservice.service.EmployeeService;
 import lombok.RequiredArgsConstructor;
@@ -40,5 +41,11 @@ public class EmployeeController {
     public ResponseEntity<List<EmployeeDTO>> list() {
         List<EmployeeDTO> EmployeeDTOList = employeeService.listEmployees();
         return new ResponseEntity<>(EmployeeDTOList, HttpStatus.OK);
+    }
+
+    @GetMapping("{id}")
+    public ResponseEntity<APIResponseDto> getById(@PathVariable UUID id) {
+        APIResponseDto employeeDTO = employeeService.getById(id);
+        return new ResponseEntity<>(employeeDTO, HttpStatus.OK);
     }
 }
