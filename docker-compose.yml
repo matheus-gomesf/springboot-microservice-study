@@ -7,7 +7,6 @@ services:
       MYSQL_USER: usuario
       MYSQL_PASSWORD: senha
       MYSQL_DATABASE: banco-de-dados
-      MYSQL_RANDOM_ROOT_PASSWORD: true
     ports:
       - "3306:3306"
     volumes:
